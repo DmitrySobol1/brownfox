@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
 import main from '../assets/main.png'
 // import main2 from '../assets/main2.png'
@@ -8,13 +9,25 @@ import main from '../assets/main.png'
 // import PetsIcon from '@mui/icons-material/Pets';
 
 import '../App.css'
-import Typography from '@mui/material/Typography';
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import TrendingUpIcon from '@mui/icons-material/TrendingUp'
+import { ProgressModal } from '../components/ProgressModal'
 
 function HomePage() {
   const navigate = useNavigate()
+  const [progressModalOpen, setProgressModalOpen] = useState(false)
 
   const handleLevelSelect = (level: string) => {
     navigate(`/level/${level}`)
+  }
+
+  const handleOpenProgress = () => {
+    setProgressModalOpen(true)
+  }
+
+  const handleCloseProgress = () => {
+    setProgressModalOpen(false)
   }
 
   return (
@@ -81,6 +94,36 @@ function HomePage() {
             </div>
         </div>
       </div>
+
+      {/* Progress Button */}
+      <Button
+        variant="outlined"
+        fullWidth
+        startIcon={<TrendingUpIcon />}
+        onClick={handleOpenProgress}
+        sx={{
+          mt: 4,
+          mb: 8,
+          py: 1.5,
+          borderRadius: '12px',
+          textTransform: 'none',
+          fontSize: '1.1rem',
+          borderColor: '#2196f3',
+          color: '#2196f3',
+          '&:hover': {
+            borderColor: '#1976d2',
+            backgroundColor: 'rgba(33, 150, 243, 0.04)',
+          },
+        }}
+      >
+        📊 Мой прогресс
+      </Button>
+
+      {/* Progress Modal */}
+      <ProgressModal
+        open={progressModalOpen}
+        onClose={handleCloseProgress}
+      />
 
       <div style={{
         position: 'fixed',

@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography'
 // import Box from '@mui/material/Box'
 // import Paper from '@mui/material/Paper'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import { ProgressToggle } from '../components/ProgressToggle'
 import '../App.css'
 
 // Импорт всех изображений
@@ -169,6 +170,7 @@ function CommandPage() {
         {commandInfo.title}
       </Typography>
 
+      <ProgressToggle level={level || ''} command={command || ''} />
 
       <Typography variant="body1" sx={{ mb: 3 }}>
         {commandInfo.description1}
