@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-import main from '../assets/main.png'
+// import main from '../assets/main.png'
 import main2 from '../assets/main2.png'
 
 // import StarsIcon from '@mui/icons-material/Stars';
