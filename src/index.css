@@ -24,7 +24,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -79,6 +79,7 @@ button:focus-visible {
   border-radius: 20px;
   width: 100%;
   margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 .comandPhoto {
@@ -90,13 +91,14 @@ button:focus-visible {
 
 .wrapper {
   width: 100%;
+  align-items: flex-start;
 }
 
 .card {
   display: flex;
   margin-bottom: 20px;
-  padding-top: 5px  !important; 
-  padding-bottom: 5px  !important; 
+  padding-top: 10px  !important; 
+  padding-bottom: 10px  !important; 
 }
 
 .card1 {

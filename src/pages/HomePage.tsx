@@ -25,7 +25,7 @@ function HomePage() {
 
       {/* <h2 className='titleText'>Выберите уровень подготовки:</h2> */}
 
-      <Typography variant="h5" component="h4" gutterBottom >
+      <Typography variant="h5" component="h4" gutterBottom sx={{ textAlign: 'left' }}>
         Выберите уровень :
       </Typography>
 
@@ -33,7 +33,7 @@ function HomePage() {
         {/* <div className='icon'><PetsIcon fontSize='large' /></div> */}
         <div className='wrapperText'>
           <div className='boldText'>
-            <Typography variant="body1" sx={{ mb: 0 }}>
+            <Typography variant="button" sx={{ mb: 0 }}>
               Новичок
             </Typography>
             </div>
@@ -52,7 +52,7 @@ function HomePage() {
         {/* <div className='icon'><AssistantPhotoIcon fontSize='large'/></div> */}
         <div  className='wrapperText'>
           <div className='boldText'>
-            <Typography variant="body1" sx={{ mb: 0 }}>
+            <Typography variant="button" sx={{ mb: 0 }}>
               Средний
             </Typography>
             </div>
@@ -69,7 +69,7 @@ function HomePage() {
         {/* <div className='icon'><StarsIcon fontSize='large'/></div> */}
         <div  className='wrapperText'>
           <div className='boldText'>
-            <Typography variant="body1" sx={{ mb: 0 }}>
+            <Typography variant="button" sx={{ mb: 0 }}>
               Профи
             </Typography>
           </div>
@@ -83,9 +83,16 @@ function HomePage() {
 
       <div>
         
-        <Typography variant="body2" sx={{ mb: 0 }}>
+        {/* <Typography variant="body2" sx={{ mb: 0 }}>
               Сделано с любовью любителями собак ❤️ для любителей собак
-            </Typography></div>
+        </Typography> */}
+
+        <Typography variant="caption" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>
+           Сделано с любовью любителями собак ❤️ для любителей собак
+        </Typography>  
+
+
+        </div>
     </div>
   )
 }
