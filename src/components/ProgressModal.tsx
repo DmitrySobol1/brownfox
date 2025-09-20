@@ -65,7 +65,7 @@ export function ProgressModal({ open, onClose }: ProgressModalProps) {
       <DialogTitle sx={{ pb: 1 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h5" component="div">
-            📊 Прогресс обучения
+            Прогресс обучения
           </Typography>
           <IconButton onClick={onClose} size="small">
             <CloseIcon />
@@ -185,7 +185,7 @@ export function ProgressModal({ open, onClose }: ProgressModalProps) {
           color="error"
           variant="outlined"
         >
-          Очистить прогресс
+          Очистить
         </Button>
         <Button onClick={onClose} variant="contained">
           Закрыть

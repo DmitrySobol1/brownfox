@@ -114,29 +114,7 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Progress Button */}
-      {/* <Button
-        variant="outlined"
-        fullWidth
-        startIcon={<TrendingUpIcon />}
-        onClick={handleOpenProgress}
-        sx={{
-          mt: 4,
-          mb: 8,
-          py: 1.5,
-          borderRadius: '12px',
-          textTransform: 'none',
-          fontSize: '1.1rem',
-          borderColor: '#2196f3',
-          color: '#2196f3',
-          '&:hover': {
-            borderColor: '#1976d2',
-            backgroundColor: 'rgba(33, 150, 243, 0.04)',
-          },
-        }}
-      >
-        📊 Мой прогресс
-      </Button> */}
+    
 
       {/* Progress Modal */}
       <ProgressModal
