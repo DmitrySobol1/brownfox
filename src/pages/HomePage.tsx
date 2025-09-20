@@ -41,19 +41,20 @@ function HomePage() {
         <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
           <Chip
             label={
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px'  }}>
                 <TrendingUpIcon sx={{ fontSize: '16px' }} />
                 мой прогресс
               </div>
             }
             color='primary'
             onClick={handleOpenProgress}
-            // sx={{
-            //   cursor: 'pointer',
-            //   '&:hover': {
-            //     backgroundColor: 'rgba(33, 150, 243, 0.08)',
-            //   }
-            // }}
+            sx={{
+              mb:4,
+              cursor: 'pointer',
+              '&:hover': {
+                backgroundColor: 'rgba(33, 150, 243, 0.08)',
+              }
+            }}
           />
         </div>
 
