@@ -19,16 +19,14 @@ function HomePage() {
   return (
     <div className='wrapper'>
       
-      <div className='mainPhoto_wrapper'>
 
         <img src={main} className="mainPhoto" alt="Main" />
-      </div>
 
 
       {/* <h2 className='titleText'>Выберите уровень подготовки:</h2> */}
 
       <Typography variant="h5" component="h4" gutterBottom >
-        Выберите уровень подготовки:
+        Выберите уровень :
       </Typography>
 
       <div className='card card1' onClick={() => handleLevelSelect('beginner')}>
