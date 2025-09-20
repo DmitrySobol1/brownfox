@@ -1,8 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
-import Paper from '@mui/material/Paper'
+// import Box from '@mui/material/Box'
+// import Paper from '@mui/material/Paper'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import '../App.css'
 
@@ -13,9 +13,11 @@ function CommandPage() {
   const getCommandInfo = (commandName: string) => {
     const commands: { [key: string]: any } = {
       // Beginner commands
-      'ls': {
-        title: 'ls - Просмотр файлов и папок',
-        description: 'Команда ls используется для просмотра содержимого директории',
+      'Сидеть': {
+        title: 'Сидеть',
+        description: '1. Встань перед собакой с лакомством в руке, опусти руку над её носом — естественно заведёт голову назад.',
+        description2: '2. Когда собака сядет, сразу пометь («хорошо»/клик) и дай лакомство.',
+        description3: '3. Повтори 5–8 раз в коротких сессиях по 3–5 минут.',
         syntax: 'ls [опции] [путь]',
         examples: [
           { code: 'ls', description: 'Показать файлы в текущей папке' },
@@ -306,24 +308,33 @@ function CommandPage() {
   const commandInfo = getCommandInfo(command || '')
 
   return (
-    <div className='wrapper' style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <div className='wrapperLevel' style={{ maxWidth: '800px', margin: '0 auto' }}>
       <Button
         startIcon={<ArrowBackIcon />}
         onClick={() => navigate(`/level/${level}`)}
-        sx={{ alignSelf: 'flex-start', mb: 2 }}
+        sx={{ alignSelf: 'flex-start', mb: 4 }}
       >
-        Назад к уровню
+        Назад 
       </Button>
 
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Typography variant="h5" component="h4" gutterBottom>
         {commandInfo.title}
       </Typography>
+
 
       <Typography variant="body1" sx={{ mb: 3 }}>
         {commandInfo.description}
       </Typography>
+      
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        {commandInfo.description2}
+      </Typography>
+      
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        {commandInfo.description3}
+      </Typography>
 
-      {commandInfo.syntax && (
+      {/* {commandInfo.syntax && (
         <Paper sx={{ p: 2, mb: 3, backgroundColor: '#f5f5f5' }}>
           <Typography variant="h6" gutterBottom>
             Синтаксис:
@@ -332,9 +343,9 @@ function CommandPage() {
             {commandInfo.syntax}
           </Typography>
         </Paper>
-      )}
+      )} */}
 
-      {commandInfo.examples && commandInfo.examples.length > 0 && (
+      {/* {commandInfo.examples && commandInfo.examples.length > 0 && (
         <Box sx={{ mb: 3 }}>
           <Typography variant="h6" gutterBottom>
             Примеры использования:
@@ -358,9 +369,9 @@ function CommandPage() {
             </Paper>
           ))}
         </Box>
-      )}
+      )} */}
 
-      {commandInfo.tips && commandInfo.tips.length > 0 && (
+      {/* {commandInfo.tips && commandInfo.tips.length > 0 && (
         <Box sx={{ mb: 3 }}>
           <Typography variant="h6" gutterBottom>
             Полезные советы:
@@ -375,7 +386,7 @@ function CommandPage() {
             ))}
           </ul>
         </Box>
-      )}
+      )} */}
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import '../App.css'
+import Typography from '@mui/material/Typography'
 
 function LevelPage() {
   const { level } = useParams<{ level: string }>()
@@ -27,12 +28,12 @@ function LevelPage() {
           title: 'Средний уровень',
           description: 'Развивайте продвинутые навыки',
           commands: [
-            { name: 'grep', description: 'Поиск текста в файлах' },
-            { name: 'find', description: 'Поиск файлов и папок' },
-            { name: 'chmod', description: 'Изменение прав доступа' },
-            { name: 'tar', description: 'Работа с архивами' },
-            { name: 'ps', description: 'Просмотр процессов' },
-            { name: 'kill', description: 'Завершение процессов' }
+            { name: 'Место', description: 'Поиск текста в файлах' },
+            { name: 'Рядом', description: 'Поиск файлов и папок' },
+            { name: 'Лежать', description: 'Изменение прав доступа' },
+            // { name: 'tar', description: 'Работа с архивами' },
+            // { name: 'ps', description: 'Просмотр процессов' },
+            // { name: 'kill', description: 'Завершение процессов' }
           ]
         }
       case 'professional':
@@ -40,12 +41,12 @@ function LevelPage() {
           title: 'Профессионал',
           description: 'Мастерство и экспертные знания',
           commands: [
-            { name: 'awk', description: 'Обработка текстовых данных' },
-            { name: 'sed', description: 'Редактирование потока данных' },
-            { name: 'cron', description: 'Планировщик задач' },
-            { name: 'rsync', description: 'Синхронизация файлов' },
-            { name: 'ssh', description: 'Удаленное подключение' },
-            { name: 'docker', description: 'Контейнеризация приложений' }
+            { name: 'Аппорт', description: 'Обработка текстовых данных' },
+            { name: 'Прыжок через барьер', description: 'Редактирование потока данных' },
+            { name: 'Поиск предмета', description: 'Планировщик задач' },
+            // { name: 'rsync', description: 'Синхронизация файлов' },
+            // { name: 'ssh', description: 'Удаленное подключение' },
+            // { name: 'docker', description: 'Контейнеризация приложений' }
           ]
         }
       default:
@@ -68,18 +69,28 @@ function LevelPage() {
       <Button
         startIcon={<ArrowBackIcon />}
         onClick={() => navigate('/')}
-        sx={{ alignSelf: 'flex-start', mb: 2 }}
+        sx={{ alignSelf: 'flex-start', mb: 4 }}
       >
         Назад
       </Button>
 
-    
+      <Typography variant="h5" component="h4" gutterBottom>
+        {levelInfo.title}
+      </Typography>
 
-      <h2>{levelInfo.title}</h2>
-      <p>{levelInfo.description}</p>
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        {levelInfo.description}
+      </Typography>
+
+      {/* <h2>{levelInfo.title}</h2> */}
+      {/* <p>{levelInfo.description}</p> */}
 
       <div style={{ marginTop: '3rem', width: '100%' }}>
-        <h3>Выберите команду для изучения:</h3>
+        {/* <h3>Выберите команду для изучения:</h3> */}
+
+      <Typography variant="h6" component="h4" gutterBottom>
+        Выберите команду для изучения:
+      </Typography>
         
         <div style={{
           display: 'grid',

@@ -117,4 +117,5 @@ button:focus-visible {
 
 .wrapperLevel {
   text-align: left;
+  align-items: flex-start;
 }
