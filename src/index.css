@@ -67,9 +67,17 @@ button:focus-visible {
   }
 }
 
+
+
+.mainPhoto_wrapper{
+  background-color: #3fa5f7;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
 .mainPhoto {
   border-radius: 20px;
-  width: 100%;
+  width: 80%;
 }
 
 .comandPhoto {
