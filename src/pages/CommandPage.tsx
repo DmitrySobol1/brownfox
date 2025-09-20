@@ -120,7 +120,7 @@ function CommandPage() {
       {commandInfo.img1 && (
         <img
           src={imageMap1[commandInfo.img2] || mainImage}
-          className="mainPhoto"
+          className="comandPhoto"
           alt={commandInfo.title}
         />
       )}
