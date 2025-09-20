@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import '../App.css'
+import { Chip } from '@mui/material'
 
 function LevelPage() {
   const { level } = useParams<{ level: string }>()
@@ -11,15 +12,15 @@ function LevelPage() {
     switch (level) {
       case 'beginner':
         return {
-          title: 'Новичок',
+          title: 'Уровень новичок',
           description: 'Изучайте основы и базовые навыки',
           commands: [
-            { name: 'ls', description: 'Просмотр файлов и папок' },
-            { name: 'cd', description: 'Переход между папками' },
-            { name: 'pwd', description: 'Показать текущую папку' },
-            { name: 'mkdir', description: 'Создание новой папки' },
-            { name: 'touch', description: 'Создание нового файла' },
-            { name: 'cp', description: 'Копирование файлов' }
+            { name: 'Сидеть', description: 'Просмотр файлов и папок' },
+            { name: 'Ко мне', description: 'Переход между папками' },
+            { name: 'Нельзя', description: 'Показать текущую папку' },
+            // { name: 'mkdir', description: 'Создание новой папки' },
+            // { name: 'touch', description: 'Создание нового файла' },
+            // { name: 'cp', description: 'Копирование файлов' }
           ]
         }
       case 'intermediate':
@@ -64,7 +65,7 @@ function LevelPage() {
   }
 
   return (
-    <div className='wrapper'>
+    <div className='wrapperLevel'>
       <Button
         startIcon={<ArrowBackIcon />}
         onClick={() => navigate('/')}
@@ -73,11 +74,14 @@ function LevelPage() {
         Назад
       </Button>
 
-      <h1>{levelInfo.title}</h1>
+    
+
+      <h2>{levelInfo.title}</h2>
       <p>{levelInfo.description}</p>
 
-      <div style={{ marginTop: '2rem', width: '100%' }}>
-        <h3>Команды для изучения:</h3>
+      <div style={{ marginTop: '3rem', width: '100%' }}>
+        <h3>Выберите команду для изучения:</h3>
+        
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
@@ -87,11 +91,12 @@ function LevelPage() {
           {levelInfo.commands.map((command, index) => (
             <div key={index}>
               <Button
-                variant="outlined"
+                // variant="outlined"
+                style={{backgroundColor:'#ffead2', color: 'black'}}
                 fullWidth
                 onClick={() => handleCommandClick(command.name)}
                 sx={{
-                  height: '80px',
+                  height: '50px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
@@ -102,9 +107,7 @@ function LevelPage() {
                 <div style={{ fontWeight: 'bold', fontSize: '1.1em' }}>
                   {command.name}
                 </div>
-                <div style={{ fontSize: '0.8em', marginTop: '4px' }}>
-                  {command.description}
-                </div>
+                
               </Button>
             </div>
           ))}
