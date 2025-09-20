@@ -339,7 +339,8 @@ function CommandPage() {
           <Typography variant="h6" gutterBottom>
             Примеры использования:
           </Typography>
-          {commandInfo.examples.map((example, index) => (
+          
+          {commandInfo.examples.map((example: any, index: number) => (
             <Paper key={index} sx={{ p: 2, mb: 2, backgroundColor: '#f8f8f8' }}>
               <Typography variant="body2" component="code" sx={{
                 fontFamily: 'monospace',
@@ -365,7 +366,7 @@ function CommandPage() {
             Полезные советы:
           </Typography>
           <ul>
-            {commandInfo.tips.map((tip, index) => (
+            {commandInfo.tips.map((tip: string, index: number) => (
               <li key={index}>
                 <Typography variant="body2">
                   {tip}

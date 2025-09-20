@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button'
-import Grid from '@mui/material/Grid'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import '../App.css'
 
@@ -79,9 +78,14 @@ function LevelPage() {
 
       <div style={{ marginTop: '2rem', width: '100%' }}>
         <h3>Команды для изучения:</h3>
-        <Grid container spacing={2} sx={{ mt: 1 }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '16px',
+          marginTop: '16px'
+        }}>
           {levelInfo.commands.map((command, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <div key={index}>
               <Button
                 variant="outlined"
                 fullWidth
@@ -102,9 +106,9 @@ function LevelPage() {
                   {command.description}
                 </div>
               </Button>
-            </Grid>
+            </div>
           ))}
-        </Grid>
+        </div>
       </div>
     </div>
   )

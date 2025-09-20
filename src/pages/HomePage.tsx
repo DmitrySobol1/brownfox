@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+
 import main from '../assets/main.png'
 
 import StarsIcon from '@mui/icons-material/Stars';
@@ -19,28 +18,28 @@ function HomePage() {
   return (
     <div className='wrapper'>
       <img src={main} className="mainPhoto" alt="Main" />
-      <h1>Выберите уровень подготовки</h1>
+      <h2 className='titleText'>Выберите уровень подготовки:</h2>
 
       <div className='card card1' onClick={() => handleLevelSelect('beginner')}>
-        <div><PetsIcon/></div>
-        <div>
-          <div>Новичок</div>
+        <div className='icon'><PetsIcon fontSize='large' /></div>
+        <div className='wrapperText'>
+          <div className='boldText'>Новичок</div>
           <div>Базовые навыки</div>
         </div>
       </div>
 
-      <div className='card card1' onClick={() => handleLevelSelect('intermediate')}>
-        <div><AssistantPhotoIcon/></div>
-        <div>
-          <div>Средний</div>
-          <div>Продвинутые навыки</div>
+      <div className='card card2' onClick={() => handleLevelSelect('intermediate')}>
+        <div className='icon'><AssistantPhotoIcon fontSize='large'/></div>
+        <div  className='wrapperText'>
+          <div className='boldText'>Средний</div>
+          <div >Продвинутые навыки</div>
         </div>
       </div>
 
-      <div className='card card1' onClick={() => handleLevelSelect('professional')}>
-        <div><StarsIcon/></div>
-        <div>
-          <div>Профи</div>
+      <div className='card card3' onClick={() => handleLevelSelect('professional')}>
+        <div className='icon'><StarsIcon fontSize='large'/></div>
+        <div  className='wrapperText'>
+          <div className='boldText'>Профи</div>
           <div>Экспертный уровень</div>
         </div>
       </div>

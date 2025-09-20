@@ -82,6 +82,35 @@ button:focus-visible {
 }
 
 .card1 {
-  background-color: yellow;
+  background-color: rgb(237,233,250);
   border-radius: 20px;
+}
+
+.card2 {
+  background-color: rgb(197,226,231);
+  border-radius: 20px;
+}
+
+.card3 {
+  background-color: rgb(210,241,222);
+  border-radius: 20px;
+}
+
+.icon {
+  background-color: rgb(209, 197, 249);
+  padding: 15px;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.wrapperText {
+  text-align: left;
+}
+
+.boldText {
+  font-weight: bold;
+}
+
+.titleText {
+  text-align: left;
 }

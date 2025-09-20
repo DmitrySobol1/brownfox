@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import reactLogo from './assets/react.svg'
+// import { useState } from 'react'
+
 import main from './assets/main.png'
 
 import StarsIcon from '@mui/icons-material/Stars';
@@ -11,7 +9,6 @@ import PetsIcon from '@mui/icons-material/Pets';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
