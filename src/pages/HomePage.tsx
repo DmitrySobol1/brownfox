@@ -10,9 +10,9 @@ import main from '../assets/main.png'
 
 import '../App.css'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 import TrendingUpIcon from '@mui/icons-material/TrendingUp'
 import { ProgressModal } from '../components/ProgressModal'
+import Chip from '@mui/material/Chip'
 
 function HomePage() {
   const navigate = useNavigate()
@@ -37,7 +37,25 @@ function HomePage() {
         <img src={main} className="mainPhoto" alt="Main" />
 
 
-      {/* <h2 className='titleText'>Выберите уровень подготовки:</h2> */}
+
+        <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
+          <Chip
+            label={
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <TrendingUpIcon sx={{ fontSize: '16px' }} />
+                мой прогресс
+              </div>
+            }
+            color='primary'
+            onClick={handleOpenProgress}
+            // sx={{
+            //   cursor: 'pointer',
+            //   '&:hover': {
+            //     backgroundColor: 'rgba(33, 150, 243, 0.08)',
+            //   }
+            // }}
+          />
+        </div>
 
       <Typography variant="h5" component="h4" gutterBottom sx={{ textAlign: 'left', mb:4 }}>
         Выберите уровень :
@@ -96,7 +114,7 @@ function HomePage() {
       </div>
 
       {/* Progress Button */}
-      <Button
+      {/* <Button
         variant="outlined"
         fullWidth
         startIcon={<TrendingUpIcon />}
@@ -117,7 +135,7 @@ function HomePage() {
         }}
       >
         📊 Мой прогресс
-      </Button>
+      </Button> */}
 
       {/* Progress Modal */}
       <ProgressModal

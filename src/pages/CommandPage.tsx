@@ -170,7 +170,7 @@ function CommandPage() {
         {commandInfo.title}
       </Typography>
 
-      <ProgressToggle level={level || ''} command={command || ''} />
+      <ProgressToggle level={level || ''} command={command || ''} sx={{display: 'block', textAlign: 'left' }} />
 
       <Typography variant="body1" sx={{ mb: 3 }}>
         {commandInfo.description1}
