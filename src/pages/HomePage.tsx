@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 
-// import main from '../assets/main.png'
-import main2 from '../assets/main2.png'
+import main from '../assets/main.png'
+// import main2 from '../assets/main2.png'
 
 // import StarsIcon from '@mui/icons-material/Stars';
 // import AssistantPhotoIcon from '@mui/icons-material/AssistantPhoto';
@@ -21,7 +21,7 @@ function HomePage() {
     <div className='wrapper'>
       
 
-        <img src={main2} className="mainPhoto" alt="Main" />
+        <img src={main} className="mainPhoto" alt="Main" />
 
 
       {/* <h2 className='titleText'>Выберите уровень подготовки:</h2> */}
