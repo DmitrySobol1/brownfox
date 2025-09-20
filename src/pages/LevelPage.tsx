@@ -69,7 +69,7 @@ function LevelPage() {
       <Button
         startIcon={<ArrowBackIcon />}
         onClick={() => navigate('/')}
-        sx={{ alignSelf: 'flex-start', mb: 4 }}
+        sx={{ alignSelf: 'flex-start', mb: 6 }}
       >
         Назад
       </Button>

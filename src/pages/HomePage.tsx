@@ -25,7 +25,7 @@ function HomePage() {
 
       {/* <h2 className='titleText'>Выберите уровень подготовки:</h2> */}
 
-      <Typography variant="h5" component="h4" gutterBottom sx={{ textAlign: 'left' }}>
+      <Typography variant="h5" component="h4" gutterBottom sx={{ textAlign: 'left', mb:4 }}>
         Выберите уровень :
       </Typography>
 
@@ -81,18 +81,18 @@ function HomePage() {
         </div>
       </div>
 
-      <div>
-        
-        {/* <Typography variant="body2" sx={{ mb: 0 }}>
-              Сделано с любовью любителями собак ❤️ для любителей собак
-        </Typography> */}
-
+      <div style={{
+        position: 'fixed',
+        bottom: '20px',
+        left: '0',
+        right: '0',
+        textAlign: 'center',
+        zIndex: 1000
+      }}>
         <Typography variant="caption" gutterBottom sx={{ display: 'block', textAlign: 'center' }}>
-           Сделано с любовью любителями собак ❤️ для любителей собак
-        </Typography>  
-
-
-        </div>
+           Сделано любителями собак ❤️ для любителей собак
+        </Typography>
+      </div>
     </div>
   )
 }

@@ -160,7 +160,7 @@ function CommandPage() {
       <Button
         startIcon={<ArrowBackIcon />}
         onClick={() => navigate(`/level/${level}`)}
-        sx={{ alignSelf: 'flex-start', mb: 4 }}
+        sx={{ alignSelf: 'flex-start', mb: 6 }}
       >
         Назад 
       </Button>
