@@ -69,15 +69,15 @@ button:focus-visible {
 
 
 
-.mainPhoto_wrapper{
+/* .mainPhoto_wrapper{
   background-color: #3fa5f7;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-}
+} */
 
 .mainPhoto {
   border-radius: 20px;
-  width: 80%;
+  width: 100%;
 }
 
 .comandPhoto {
